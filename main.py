@@ -1,5 +1,9 @@
+from todo_list_class import ToDoList
+
 def main():
-    
+    example = ToDoList()
+
+
     while True:
         print("To Do List Workspace")
         print("-----------------------------")
@@ -15,7 +19,7 @@ def main():
         if choice == "1":
             print("You picked the first option")
         elif choice == "2":
-            print("You picked the option number 2")
+            example.__str__()
         elif choice == "3":
             print("You picked the option number 3")
         elif choice == "4":
