@@ -1,28 +1,34 @@
 import json
+from task_class import Task
 
 class ToDoList:
     def __init__(self):
         self.__tasks = []
-        self.__load_json__()
-        self.__get_current_tasks__()
         
-    def __load_json__(self):
+    def load_json(self):
         with open('./tasks.json') as json_file:
-            self.data = json.load(json_file)
-
-    def __str__(self):
+            data = json.load(json_file)
+        self.__tasks = data
+    
+    def get_current_tasks(self):
+        if len(self.__tasks) == 0:
+            print("\nThere is no task in your ToDo List")
         for task in self.__tasks:
             print(task)
-    
-    def __get_current_tasks__(self):
-        for task in self.data:
-            self.__tasks.append(task)
+
+    def upload_new_task_json(self, tasks):
+        with open("./tasks.json", "w") as f:
+            json.dump(tasks, f, indent=4)
 
     def save_and_exit(self):
         pass
 
     def add_task(self):
-        pass
+        self.load_json()
+        new_task = Task("Primul meu Task", "Descrierea primului meu task", "Tagul meu", "Maine", "High")
+        self.__tasks.append(new_task.to_dict())
+        self.upload_new_task_json(self.__tasks)
+
 
     def remove_task(self):
         pass

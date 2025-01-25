@@ -2,10 +2,11 @@ from todo_list_class import ToDoList
 
 def main():
     example = ToDoList()
+    example.load_json()
 
 
     while True:
-        print("To Do List Workspace")
+        print("\nTo Do List Workspace")
         print("-----------------------------")
         print("1. Add a new task")
         print("2. View all current tasks")
@@ -18,8 +19,10 @@ def main():
 
         if choice == "1":
             print("You picked the first option")
+            example.add_task()
+            print("Adding your new task...")
         elif choice == "2":
-            example.__str__()
+            example.get_current_tasks()
         elif choice == "3":
             print("You picked the option number 3")
         elif choice == "4":

@@ -1,26 +1,42 @@
 [
     {
-        "title": "title 1",
-        "description": "Desc1",
-        "tag": "tag1",
-        "completed": false,
-        "due_date": "due_date1",
-        "priority": "Small"
+        "title": "Primul meu Task",
+        "description": "Descrierea primului meu task",
+        "tag": "Tagul meu",
+        "due_date": "Maine",
+        "priority": "High",
+        "completed": false
     },
     {
-        "title": "title 2",
-        "description": "Desc2",
-        "tag": "tag2",
-        "completed": true,
-        "due_date": "due_date2",
-        "priority": "Medium"
+        "title": "Primul meu Task",
+        "description": "Descrierea primului meu task",
+        "tag": "Tagul meu",
+        "due_date": "Maine",
+        "priority": "High",
+        "completed": false
     },
     {
-        "title": "title 3",
-        "description": "Desc3",
-        "tag": "tag3",
-        "completed": false,
-        "due_date": "due_date1",
-        "priority": "High"
+        "title": "Primul meu Task",
+        "description": "Descrierea primului meu task",
+        "tag": "Tagul meu",
+        "due_date": "Maine",
+        "priority": "High",
+        "completed": false
+    },
+    {
+        "title": "Primul meu Task",
+        "description": "Descrierea primului meu task",
+        "tag": "Tagul meu",
+        "due_date": "Maine",
+        "priority": "High",
+        "completed": false
+    },
+    {
+        "title": "Primul meu Task",
+        "description": "Descrierea primului meu task",
+        "tag": "Tagul meu",
+        "due_date": "Maine",
+        "priority": "High",
+        "completed": false
     }
 ]
