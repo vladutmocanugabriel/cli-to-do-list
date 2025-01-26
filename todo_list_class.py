@@ -1,5 +1,5 @@
 import json
-from tabulate import tabulate
+from tabulate import tabulate # type: ignore
 from task_class import Task
 
 class ToDoList:
