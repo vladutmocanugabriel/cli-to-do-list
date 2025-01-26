@@ -11,22 +11,28 @@ def main():
         print("1. Add a new task")
         print("2. View all current tasks")
         print("3. Mark Task as COMPLETED")
-        print("4. Delete Task")
-        print("5. Save and Exit")
+        print("4. Delete Task by TITLE")
+        print("5. Delete Task by ID")
+        print("6. Save and Exit")
 
 
         choice = input("\nChoose an option (1-5): ")
 
         if choice == "1":
             example.add_task()
-            print("\n > Adding your new task...")
         elif choice == "2":
             example.view_list()
         elif choice == "3":
-            print("You picked the option number 3")
+            example.mark_completed()
+            print("\n> Your task is now completed.")
         elif choice == "4":
-            print("You picked the option number 4")
+            example.remove_task_by_title()
+            print("\n Ok, we'll delete this task for you...")
         elif choice == "5":
+            example.remove_task_by_id()
+            print("\n Ok, we'll delete this task for you...")
+        elif choice == "6":
+            print("\n> Saving everything...")
             print("-----------------------------")
             print("\n> Thank you for using our ToDoList, save and exit it is my Lord :D ")
             break
