@@ -15,24 +15,23 @@ def main():
         print("5. Save and Exit")
 
 
-        choice = input("Choose an option (1-5):")
+        choice = input("\nChoose an option (1-5): ")
 
         if choice == "1":
-            print("You picked the first option")
             example.add_task()
-            print("Adding your new task...")
+            print("\n > Adding your new task...")
         elif choice == "2":
-            example.get_current_tasks()
+            example.view_list()
         elif choice == "3":
             print("You picked the option number 3")
         elif choice == "4":
             print("You picked the option number 4")
         elif choice == "5":
             print("-----------------------------")
-            print("Thank you for using our ToDoList, save and exit it is my Lord :D ")
+            print("\n> Thank you for using our ToDoList, save and exit it is my Lord :D ")
             break
         else:
-            raise Exception("There is no such choice!")
+            raise Exception("\n> There is no such choice!")
 
 
 

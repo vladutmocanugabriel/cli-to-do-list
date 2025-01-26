@@ -10,13 +10,13 @@ class ToDoList:
             data = json.load(json_file)
         self.__tasks = data
     
-    def get_current_tasks(self):
+    def __get_current_tasks(self):
         if len(self.__tasks) == 0:
             print("\nThere is no task in your ToDo List")
         for task in self.__tasks:
-            print(task)
+            print(f"\n{task}")
 
-    def upload_new_task_json(self, tasks):
+    def __upload_new_task_json(self, tasks):
         with open("./tasks.json", "w") as f:
             json.dump(tasks, f, indent=4)
 
@@ -27,11 +27,11 @@ class ToDoList:
         self.load_json()
         new_task = Task("Primul meu Task", "Descrierea primului meu task", "Tagul meu", "Maine", "High")
         self.__tasks.append(new_task.to_dict())
-        self.upload_new_task_json(self.__tasks)
+        self.__upload_new_task_json(self.__tasks)
 
 
     def remove_task(self):
         pass
 
     def view_list(self):
-        pass
+        return self.__get_current_tasks()
