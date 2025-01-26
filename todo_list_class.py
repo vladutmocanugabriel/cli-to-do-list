@@ -47,8 +47,16 @@ class ToDoList:
         self.__upload_new_task_json(self.__tasks)
         print("\n> Adding your new task...")
 
+    def choose_remove(self):
+        remove_method = input("Would you prefer to remove by title or by ID?")
 
-    def remove_task_by_title(self):
+        if remove_method == "title":
+            self.__remove_task_by_title()
+        elif remove_method == "id":
+            self.__remove_task_by_id()
+
+
+    def __remove_task_by_title(self):
         print("\n Here you have all the available tasks to remove:")
         self.__get_current_tasks()
         print("\n -----------------------------")
@@ -58,7 +66,7 @@ class ToDoList:
                 self.__tasks.remove(task)
         self.__upload_new_task_json(self.__tasks)
 
-    def remove_task_by_id(self):
+    def __remove_task_by_id(self):
         print("\n Here you have all the available tasks to remove:")
         self.__get_current_tasks()
         print("\n -----------------------------")
